@@ -12,7 +12,7 @@ selectors = {
                     "purchase_date": ("span.user-post__published > time:nth-child(2)",'datetime'),
                 }
 
-def extrac_feature(ancestor, selector=None, attribute=None, multiple=False):
+def extract_feature(ancestor, selector=None, attribute=None, multiple=False):
     if selector:
         if multiple:
             if attribute:
