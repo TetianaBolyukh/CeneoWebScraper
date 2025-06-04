@@ -17,12 +17,12 @@
     <section class="container">
         <div class="row">
             <div class="col-3">
-                <u1>
-                    <li><a href="{{url_for('index')}}">Strona główna</a></li>
-                    <li><a href="{{url_for('display_form')}}">Ekstrakcja opinii</a></li>
-                    <li><a href="{{url_for('products')}}">Lista produktów</a></li>
-                    <li><a href="{{url_for('author')}}">O autorze</a></li>
-                </u1>
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active-item{% endif %}">Strona główna</a></li>
+                    <li><a href="{{ url_for('display_form') }}" class="{% if request.endpoint == 'display_form' %}active-item{% endif %}">Ekstrakcja opinii</a></li>
+                    <li><a href="{{ url_for('products') }}" class="{% if request.endpoint == 'products' %}active-item{% endif %}">Lista produktów</a></li>
+                    <li><a href="{{ url_for('author') }}" class="{% if request.endpoint == 'author' %}active-item{% endif %}">O autorze</a></li>
+                  </ul>                  
             </div>
             <div class="col-9">
                 {% block content %}
