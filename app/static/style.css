@@ -200,3 +200,9 @@ footer p {
   color: #fff;
 }
 
+/*Opinion Bar*/
+.modal-content {
+    width: 500px;
+    height: 750px;
+}
+
